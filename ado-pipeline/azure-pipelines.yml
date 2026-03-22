@@ -1,0 +1,15 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: '1.6.0'
+
+- script: terraform init
+- script: terraform validate
+- script: terraform plan -var-file="terraform.tfvars"
+- script: terraform apply -auto-approve -var-file="terraform.tfvars"
