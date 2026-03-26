@@ -1,0 +1,13 @@
+
+│ Error: creating CloudWatch Metric Alarm
+│ 
+│   with module.alarms.aws_cloudwatch_metric_alarm.tgw_vpc_attachment_stale,
+│   on modules/alarms/main.tf line 188, in resource "aws_cloudwatch_metric_alarm" "tgw_vpc_attachment_stale":
+│  188: resource "aws_cloudwatch_metric_alarm" "tgw_vpc_attachment_stale" {
+│ 
+│ ID: st-nprod-tgw-vpc-attachment-stale
+│ Cause: operation error CloudWatch: PutMetricAlarm, , api error
+│ ValidationError: Exactly one element of the metrics list should return
+│ data."
+│ 
+╵
